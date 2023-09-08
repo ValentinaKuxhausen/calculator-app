@@ -1,0 +1,23 @@
+<div class="container">
+  <input type="text" [(ngModel)]="result" />
+  <div>
+    <button (click)="appendToResult('1')">1</button>
+    <button (click)="appendToResult('2')">2</button>
+    <button (click)="appendToResult('3')">3</button>
+    <button (click)="appendToResult('4')">4</button>
+    <button (click)="appendToResult('5')">5</button>
+    <button (click)="appendToResult('6')">6</button>
+    <button (click)="appendToResult('7')">7</button>
+    <button (click)="appendToResult('8')">8</button>
+    <button (click)="appendToResult('9')">9</button>
+    <button class="wide-button" (click)="appendToResult('0')">0</button>
+    <button (click)="appendToResult(',')">,</button>
+  </div>
+  <button (click)="calculate()">=</button>
+  <button (click)="clear()">C</button>
+
+  <button (click)="appendToResult('+')">+</button>
+  <button (click)="appendToResult('-')">-</button>
+  <button (click)="appendToResult('*')">*</button>
+  <button (click)="appendToResult('/')">/</button>
+</div>
