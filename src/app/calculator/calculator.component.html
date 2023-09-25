@@ -1,17 +1,23 @@
 <div class="container">
-  <input value="0" [(ngModel)]="result" />
+  <input (click)="clickChange()" [(ngModel)]="result" />
 
-  <button class="numberable" (click)="appendToResult('1')">1</button>
+  <button
+    class="numberable"
+    *ngFor="let num of numbers"
+    (click)="appendToResult(num.toString())"
+  >
+    {{ num }}
+  </button>
+
+  <!-- <button class="numberable" (click)="appendToResult('1')">1</button>
   <button class="numberable" (click)="appendToResult('2')">2</button>
   <button class="numberable" (click)="appendToResult('3')">3</button>
-
   <button class="numberable" (click)="appendToResult('4')">4</button>
   <button class="numberable" (click)="appendToResult('5')">5</button>
   <button class="numberable" (click)="appendToResult('6')">6</button>
-
   <button class="numberable" (click)="appendToResult('7')">7</button>
   <button class="numberable" (click)="appendToResult('8')">8</button>
-  <button class="numberable" (click)="appendToResult('9')">9</button>
+  <button class="numberable" (click)="appendToResult('9')">9</button> -->
 
   <button class="wide-button numberable" (click)="appendToResult('0')">
     0
